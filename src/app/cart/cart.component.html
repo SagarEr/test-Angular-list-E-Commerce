@@ -1,0 +1,20 @@
+
+<h4>Grand Total {{total()}}</h4>
+<a routerLink="">Show List</a>
+<ul>
+
+    <li *ngFor="let p of a;let i=index">name={{p.name}} category={{p.category}} quantity={{p.quantity}} price={{p.rate}}
+      rating={{p.avgRating}} 
+     
+      <button (click)="remove(i)">X</button>
+
+ <select (change)="set(i,p.quantity)" name="" id="" [(ngModel)]="p.quantity" >
+   
+    <option *ngFor="let num of number" value="{{num}}">{{num}}</option>
+    </select> 
+    <span class="ab">subtotal={{p.quantity*p.rate}}</span>
+    </li>
+  
+  </ul>
+
+  

@@ -1,0 +1,9 @@
+<a routerLink="/cart">Show Cart</a>
+<ul>
+
+  <li *ngFor="let p of a;let i=index">name={{p.name}} category={{p.category}} price={{p.rate}}
+    rating={{p.avgRating}}
+    <button (click)="add(i)">Add to cart</button>
+  </li>
+
+</ul>
